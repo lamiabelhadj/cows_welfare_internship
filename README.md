@@ -25,6 +25,20 @@ The project builds upon the methodology of Lardy et al. (2023) and introduces en
   - Tested models include Random Forest, XGBoost, LightGBM, and Bi-LSTM.
   - Hyperparameter tuning via Grid Search and Cross-Validation.
   - Pipeline comparison with and without data augmentation to assess robustness.
+  ## 🔄 Pipeline Overview
+
+This project implements two predictive pipelines in the first place:
+
+**Pipeline 1:**
+- Data Cleaning & Preparation
+- Feature Selection (SHAP values)
+- Classification using RF, XGBoost, LightGBM, Bi-LSTM
+
+**Pipeline 2:**
+- Data Cleaning & Preparation
+- Data Augmentation (SMOTE-ENN)
+- Feature Selection (SHAP values)
+- Classification using RF, XGBoost, LightGBM, Bi-LSTM
 
 ## 🚀 Project Structure
 
