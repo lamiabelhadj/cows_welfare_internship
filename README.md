@@ -14,12 +14,9 @@ While `release-final` consolidates the **clean, reproducible pipeline**, this br
 > Includes multiple iterations of imbalance handling methods and comparison experiments.
 
 Contains:
-- `SMOTE_function_v1.ipynb`, `SMOTE_ENN_v2.ipynb`, `ADASYN_trials.ipynb`  
-  → Various trials combining **SMOTE**, **SMOTE+ENN**, and **ADASYN** techniques.  
-- Comparative analysis notebooks assessing oversampling ratios, class balance visualization, and F1 improvements.  
+- Different versions of SMOTE ENN function based notebooks.
 - Final integration notebook used later in `release-final`.
 
-*(Purpose: benchmark and evaluate impact of different resampling strategies on minority health classes.)*
 
 ---
 
@@ -40,22 +37,16 @@ Contains:
 
 #### 📂 Cleaning/
 - Early versions testing rule-based filtering and statistical thresholds.  
-- Trials for handling negative durations, sensor glitches, or invalid timestamps.  
-
+-Different function-based notebooks versions.
 #### 📂 Feature engineering/
-- Different transformation trials: rolling averages, cumulative metrics, Fourier-based behavior features, and domain-driven encodings.  
-- Notebooks testing derived activity ratios (e.g., `EAT/REST`, `ALLEY/ACTIVE`).
+- Different transformation trials in a modular way.
 
 #### 📂 Feature selection/
-- SHAP-, RFE-, and correlation-based feature ranking versions.  
-- Testing alternative selectors (e.g., BorutaPy, LightGBM importances).  
-- Cross-dataset comparison of selected subsets.
+- SHAP feature selection versions.  
 
 #### 📂 Transformation/
-- Several scaling and normalization trials using StandardScaler, RobustScaler, and MinMaxScaler.  
-- Parameter tuning for imputation strategies (KNN, Iterative, GAN-based).  
+- KNN reassignmenet and episodes alignment. 
 
-*(Purpose: iterative refinement of the preprocessing workflow prior to final consolidation.)*
 
 ---
 
@@ -63,20 +54,17 @@ Contains:
 > Contains all experiments and model prototypes, each with multiple versions and parameter trials.
 
 #### 🔹 **Random Forest/**
-- Different configurations for max depth, estimators, and class weighting.  
 - Validation runs on multiple dataset splits.  
-- Feature importance extraction trials.
+
 
 #### 🔹 **XG_Boost/**
-- Parameter sweeps (learning rate, max depth, gamma, and scale_pos_weight).  
-- Early performance benchmarking across all datasets.
+- Verification of performance across all datasets.
 
 #### 🔹 **LightGBM/**
-- Comparative tests with early stopping, categorical encoding, and tuned learning rates.  
-- Exploratory use of augmented vs non-augmented datasets.
+- Verification of performance across all datasets.
 
 #### 🔹 **MLP_non_augmented/**
-- Multiple network depths (2 to 4 layers), dropout variations, and activation functions.  
+- Multiple network depths (2 to 3 layers), dropout variations, and activation functions.  
 - Optimizer trials (Adam, AdamW, RMSprop) with different schedulers (StepLR, OneCycleLR).  
 - Baseline vs tuned hyperparameter versions.
 
@@ -98,23 +86,14 @@ Contains:
 ### 📁 **5. Results/**
 > Logs, intermediate transformations, and comparison notebooks for model evaluation.
 
-Contains:
-- Early transformation outputs for each dataset before standardization.  
-- Multiple `*_output_vX.ipynb` notebooks comparing macro/micro F1 across iterations.  
-- Validation vs test set performance benchmarking notebooks.  
-- Visual summaries and per-class confusion matrices.
 
 *(Purpose: archive of iterative evaluation phases leading to the final selected models.)*
 
 ---
 
 ### 📁 **6. Extra/**
-> Helper utilities, data manipulation, and experimental preprocessing scripts.
+> Helper utilities, data manipulation, and splitting data scripts.
 
-Contains:
-- Multiple `Split_data_vX.ipynb` versions experimenting with different random seeds and stratification methods.  
-- Data truncation and shuffling scripts used during exploratory phases.  
-- Temporary notebooks used for dataset consistency checks and debugging.
 
 ---
 
