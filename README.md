@@ -68,8 +68,8 @@ Follow the same structured steps as defined in the project:
 3. One-Hour Shifting for Feature Aggregation  
 4. Data Augmentation with SMOTE-ENN  
 5. Feature Calculation (32 features)  
-6. Feature Selection using SHAP or RFE  
-7. Model Training with XGBoost, RF, LightGBM, or Bi-LSTM  
+6. Feature Selection using SHAP   
+7. Model Training with XGBoost, RF, LightGBM,  Bi-LSTM , MLP or FT-Transformer 
 8. Model Evaluation (F1-scores, per-class performance)
 
 ---
